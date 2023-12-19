@@ -1,8 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+"Diary of a Wimpy Researcher" is a personal blog that I've created mainly for my own use, to document my work and maintain focus and motivation. This is particularly important for me, as I often find it challenging to stay concentrated on ongoing projects due to the abundance of exciting things around.
