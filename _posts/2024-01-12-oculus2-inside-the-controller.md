@@ -7,8 +7,7 @@ image: /assets/img/2024-01-12/controller.jpg
 ---
 
 ## Controller overview
-
-This time I decided to dig into oculus's controller to see what interesting I can find there.
+This time, I decided to dig into Oculus's controller to see what interesting I could find there.
  I'm taking a closer look at the Oculus Quest 2 controller. I've always been curious about what makes this piece of tech tick, and now, I'm finally digging in to see what's inside.
 
 
@@ -22,12 +21,12 @@ The first intriguing discovery can be found inside the battery compartment, conc
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/battery-holder.jpg)
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/battery-holder-pins.jpg)
 
-That is very interesing.
+That is very interesting.
 I'm now starting to take apart the controller to examine these pins. Fortunately, identifying the pins wasn't difficult as they are clearly labeled:
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/battery-board-pins.jpg)
-(yeah, on this photo I already soldered wires to connect an external power source instead of a battery)
+(yeah, in this photo, I already soldered wires to connect an external power source instead of a battery)
 
-A quick examination revealed that the SWD lines are not connected to SoC pins. This leads to an another finding: the SWD lines (SWDCLK and SWDIO) are physically disconnected but can be reconnected by soldering 0R resistors R2 and R1.
+A quick examination revealed that the SWD lines are not connected to SoC pins. This leads to another finding: the SWD lines (SWDCLK and SWDIO) are physically disconnected but can be reconnected by soldering 0R resistors R2 and R1.
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/battery-board-bottom.jpg)
 
 | Name | Pin |
@@ -35,10 +34,10 @@ A quick examination revealed that the SWD lines are not connected to SoC pins. T
 R2 | SWDCLK
 R1 | SWDIO
 
-### Main board
+### Mainboard
 
 #### Bottom side
-I pull out all internal to do better examination.
+I pulled out all internal to do a better examination.
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-top-01.jpg)
 
 I traced down the TPs:
@@ -55,7 +54,7 @@ TP12 | 2.7V
 TP13 | 3.3V
 TP16 | GND
 
-J1 connector is for connection the battery pcb.
+J1 connector is used for connecting the battery pcb.
 
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-top-03.jpg)
 
@@ -67,17 +66,23 @@ TP17 | GND
 TP10 | nrf52 P0.27
 TP20 | J5 1st pin
 
-J3 and J4 connectors are for LED ring. J5 is for 3D Analog Joystick
+J3 and J4 connectors are for LED rings. J5 is for 3D Analog Joystick
 
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-top-02.jpg)
 
-J1 is the antenna connector.
+J2 is the antenna connector.
 
 #### Top side 
 
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-bottom-01.jpg)
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-bottom-02.jpg)
 ![]({{site.url}}{{site.baseurl}}/assets/img/2024-01-12/controller-board-bottom-03.jpg)
+
+| Switch Name | Button Name |
+| - | -- |
+SW3 | Y
+SW2 | X
+SW1 | Oculus/Home
 
 #### Individual ICs
 
