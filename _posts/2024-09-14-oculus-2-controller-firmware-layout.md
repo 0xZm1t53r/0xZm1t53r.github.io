@@ -6,7 +6,7 @@ categories: Oculus2
 image: /assets/img/2024-09-15/board-handdrawing.png
 
 ---
-# Reverse Engineering the Firmware Layout of Oculus Quest 2 Controller
+## Intro
 
 The [extracted firmware dump]({{site.url}}{{site.baseurl}}/posts/oculus2-controller-extracting-fw) provided an opportunity to better understand the memory architecture and data management within the controller's firmware. The illustration below showcases the layout, and here’s a breakdown of the sections involved.
 
